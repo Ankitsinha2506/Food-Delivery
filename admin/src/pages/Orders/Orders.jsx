@@ -1,7 +1,7 @@
 import React from 'react'
 import './Orders.css'
 
-const Orders = () => {
+const Orders = ({}) => {
   return (
     <div>
       Orders
