@@ -12,3 +12,8 @@
 .navbar .profile {
     width: 40px;
 }
+
+.navbar-profile {
+    position: relative;
+}
+
