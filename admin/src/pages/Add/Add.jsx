@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import './Add.css';
 import { assets } from '../../assets/assets';
 import axios from 'axios';
-import { toast } from 'react-toastify';
 
-const Add = ({url}) => {
-
+const Add = () => {
+    const url = "http://localhost:5000";
     const [image, setImage] = useState(null);
     const [data, setData] = useState({
         name: "",
@@ -38,11 +37,9 @@ const Add = ({url}) => {
                     price: "",
                     category: "Salad"
                 });
-                setImage(false);
-                toast.success(response.data.message)
+                setImage(null);
             } else {
                 // Handle unsuccessful response
-                 toast.error(response.data.message)
                 console.error('Error adding product:', response.data.message);
             }
         } catch (error) {
